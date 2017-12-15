@@ -1,9 +1,9 @@
-// ======================================
-// Author: Ebenezer Monney
-// Email:  info@ebenmonney.com
-// Copyright (c) 2017 www.ebenmonney.com
+﻿// ======================================
+// Author: Clinton Beyerle
+// Email:  info@berlstone.com
+// Copyright (c) 2017 www.berlstone.com
 // 
-// ==> Gun4Hire: contact@ebenmonney.com
+
 // ======================================
 
 import { Component, ViewEncapsulation, OnInit, OnDestroy, ViewChildren, AfterViewInit, QueryList, ElementRef } from "@angular/core";
@@ -38,7 +38,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     shouldShowLoginModal: boolean;
     removePrebootScreen: boolean;
     newNotificationCount = 0;
-    appTitle = "NgEnterprise.Web";
+    appTitle = "Quick Application";
     appLogo = require("../assets/images/logo.png");
 
     stickyToasties: number[] = [];
@@ -70,7 +70,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
         storageManager.initialiseStorageSyncListener();
 
-        translationService.addLanguages(["en", "fr", "de", "ar", "ko"]);
+        translationService.addLanguages(["en", "fr", "de", "pt", "ar", "ko"]);
         translationService.setDefaultLanguage('en');
 
 

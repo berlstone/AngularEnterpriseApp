@@ -87,6 +87,7 @@ namespace NgEnterprise.Web
                 options.AllowPasswordFlow();
                 options.AllowRefreshTokenFlow();
                 options.DisableHttpsRequirement();
+                //options.UseRollingTokens(); //Uncomment to renew refresh tokens on every refreshToken request
                 //options.AddSigningKey(new SymmetricSecurityKey(System.Text.Encoding.ASCII.GetBytes(Configuration["STSKey"])));
             });
 
@@ -113,18 +114,6 @@ namespace NgEnterprise.Web
             //    opts.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             //});
 
-
-
-            EmailSender.Configuration = new SmtpConfig
-            {
-                Host = Configuration["SmtpConfig:Host"],
-                Port = int.Parse(Configuration["SmtpConfig:Port"]),
-                UseSSL = bool.Parse(Configuration["SmtpConfig:UseSSL"]),
-                Name = Configuration["SmtpConfig:Name"],
-                Username = Configuration["SmtpConfig:Username"],
-                EmailAddress = Configuration["SmtpConfig:EmailAddress"],
-                Password = Configuration["SmtpConfig:Password"]
-            };
 
 
             services.AddSwaggerGen(c =>
@@ -163,6 +152,14 @@ namespace NgEnterprise.Web
             {
                 cfg.AddProfile<AutoMapperProfile>();
             });
+
+
+            // Configurations
+            services.Configure<SmtpConfig>(Configuration.GetSection("SmtpConfig"));
+
+
+            // Business Services
+            services.AddScoped<IEmailer, Emailer>();
 
 
             // Repositories

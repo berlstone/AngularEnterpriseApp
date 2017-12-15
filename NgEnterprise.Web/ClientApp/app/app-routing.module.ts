@@ -1,4 +1,12 @@
-﻿import { NgModule } from '@angular/core';
+﻿// ======================================
+// Author: Clinton Beyerle
+// Email:  info@berlstone.com
+// Copyright (c) 2017 www.berlstone.com
+// 
+
+// ======================================
+
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { LoginComponent } from "./components/login/login.component";

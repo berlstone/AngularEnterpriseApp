@@ -1,10 +1,17 @@
+// ======================================
+// Author: Clinton Beyerle
+// Email:  info@berlstone.com
+// Copyright (c) 2017 www.berlstone.com
+// 
+
+// ======================================
 
 import { NgModule, ErrorHandler } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { FormsModule } from "@angular/forms";
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import 'bootstrap';
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
@@ -67,7 +74,7 @@ import { RoleEditorComponent } from "./components/controls/role-editor.component
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        HttpModule,
+        HttpClientModule,
         FormsModule,
         AppRoutingModule,
         TranslateModule.forRoot({

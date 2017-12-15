@@ -1,4 +1,11 @@
-﻿
+﻿// ======================================
+// Author: Clinton Beyerle
+// Email:  info@berlstone.com
+// Copyright (c) 2017 www.berlstone.com
+// 
+
+// ======================================
+
 import { Injectable, ErrorHandler } from "@angular/core";
 import { AlertService, MessageSeverity } from './services/alert.service';
 
@@ -9,7 +16,7 @@ export class AppErrorHandler extends ErrorHandler {
     //private alertService: AlertService;
 
     constructor() {
-        super(true);
+        super();
     }
 
 

@@ -1,4 +1,10 @@
-﻿
+﻿// ======================================
+// Author: Clinton Beyerle
+// Email:  info@berlstone.com
+// Copyright (c) 2017 www.berlstone.com
+// 
+
+// ======================================
 
 import { Component, OnInit, OnDestroy, Input } from "@angular/core";
 

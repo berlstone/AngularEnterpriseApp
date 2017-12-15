@@ -1,9 +1,9 @@
 ﻿// ======================================
-// Author: Ebenezer Monney
-// Email:  info@ebenmonney.com
-// Copyright (c) 2017 www.ebenmonney.com
+// Author: Clinton Beyerle
+// Email:  info@berlstone.com
+// Copyright (c) 2017 www.berlstone.com
 // 
-// ==> Gun4Hire: contact@ebenmonney.com
+
 // ======================================
 
 import { Injectable } from '@angular/core';
@@ -46,7 +46,7 @@ export class AppTranslationService {
     useBrowserLanguage(): string | void {
         let browserLang = this.getBrowserLanguage();
 
-        if (browserLang.match(/en|fr|de|ar|ko/)) {
+        if (browserLang.match(/en|fr|de|ar|ko|pt/)) {
             this.changeLanguage(browserLang);
             return browserLang;
         }
@@ -106,6 +106,8 @@ export class TranslateLanguageLoader implements TranslateLoader {
                 return Observable.of(require("../assets/locale/fr.json"));
             case "de":
                 return Observable.of(require("../assets/locale/de.json"));
+            case "pt":
+                return Observable.of(require("../assets/locale/pt.json"));
             case "ar":
                 return Observable.of(require("../assets/locale/ar.json"));
             case "ko":

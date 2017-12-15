@@ -4,7 +4,7 @@ import { assert } from 'chai';
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule } from "@angular/forms";
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from "../components/app.component";
 import { LoginComponent } from "../components/login/login.component";
@@ -33,7 +33,7 @@ describe('AppComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [
-                HttpModule,
+                HttpClientModule,
                 FormsModule,
                 RouterTestingModule,
                 TranslateModule.forRoot({
@@ -75,10 +75,10 @@ describe('AppComponent', () => {
         expect(app).toBeTruthy();
     }));
 
-    it(`should have as title 'NgEnterprise.Web'`, async(() => {
+    it(`should have as title 'Quick Application'`, async(() => {
         const fixture = TestBed.createComponent(AppComponent);
         const app = <AppComponent>fixture.debugElement.componentInstance;
-        expect(app.appTitle).toEqual('NgEnterprise.Web');
+        expect(app.appTitle).toEqual('Quick Application');
     }));
 
     it('should render Loaded! in a h1 tag', async(() => {

@@ -68,6 +68,11 @@
   </Target>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20171215205943_check.cs" />
+    <Compile Remove="Migrations\20171215205943_check.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="ClientApp\app\assets\locale\ar.json" />
     <Content Include="ClientApp\app\assets\locale\de.json" />
     <Content Include="ClientApp\app\assets\locale\ko.json" />

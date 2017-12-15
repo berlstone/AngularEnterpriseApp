@@ -1,9 +1,9 @@
 // ======================================
-// Author: Ebenezer Monney
-// Email:  info@ebenmonney.com
-// Copyright (c) 2017 www.ebenmonney.com
+// Author: Clinton Beyerle
+// Email:  info@berlstone.com
+// Copyright (c) 2017 www.berlstone.com
 // 
-// ==> Gun4Hire: contact@ebenmonney.com
+
 // ======================================
 
 import 'core-js/client/shim';
