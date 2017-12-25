@@ -78,7 +78,8 @@
   },
   "scripts": {
     "dev-build": "node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js",
-    "test": "karma start ClientApp/test/karma.conf.js"
+    "test": "karma start ClientApp/test/karma.conf.js",
+    "start": "webpack-dev-server --env=dev --open --hot --inline --port 8080\" \"dotnet run\" "
   },
   "keywords": [
     "ng",
